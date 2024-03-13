@@ -1,1 +1,5 @@
-import "./LogInComp.scss";
+import "./LogInCompStyles.scss";
+
+export default function LogInComp() {
+  return <></>;
+}

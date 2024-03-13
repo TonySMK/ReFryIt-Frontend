@@ -1,0 +1,1 @@
+import "./LogStatusPageStyles.scss";

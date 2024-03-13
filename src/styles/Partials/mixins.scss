@@ -1,0 +1,37 @@
+@import "./fonts.scss";
+
+//Padding Presetss CSS Attributes
+@mixin someepadding {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+//Font Presets CSS Attributes
+// FIXME: d
+@mixin font000($fontFamily, $fontWeight, $fontSize, $color) {
+  font-family: $fontFamily;
+  font-weight: $fontWeightt;
+  font-size: $fontSize;
+  color: $color;
+}
+
+// Breakpoint Presets
+@mixin mobile {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}

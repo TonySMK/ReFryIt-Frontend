@@ -1,5 +1,9 @@
 import "./FooterStyles.scss";
 
 export default function Footer() {
-  return <></>;
+  return (
+    <footer>
+      <div className="footertitle">ReFryIt</div>
+    </footer>
+  );
 }

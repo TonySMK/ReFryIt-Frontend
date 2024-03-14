@@ -1,6 +1,6 @@
 import "./ChangePageColorSchemeStyles.scss";
-import sunIcon from "../../assets/icons/sun-icon.jpg";
-import moonIcon from "../../assets/icons/noon-icon.jpg";
+import sunIcon from "../../assets/icons/sun-yellow-icon.png";
+import moonIcon from "../../assets/icons/moon-icon.png";
 
 export default function ChangePageColorScheme() {
   let colorSchemeIcon = moonIcon;

@@ -1,12 +1,13 @@
 import "./GroupSideBarStyles.scss";
-import gearIcon from "../../assets/icons/gear-icon.png";
+import gearIconLight from "../../assets/icons/Gear-Icon-Clear-Background.png";
+import gearIconDark from "../../assets/icons/Gear-Icon-White-Background.png";
 
 export default function GroupSideBar() {
   return (
     <section>
       <div>Groups</div>
       <button className="groupeditbuttonwrapper">
-        <img className="groupeditbuttonwrapper__icon" src={gearIcon} />
+        <img className="groupeditbuttonwrapper__icon" src={gearIconLight} />
       </button>
     </section>
   );

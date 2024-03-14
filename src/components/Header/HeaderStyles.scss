@@ -1,8 +1,26 @@
-.headericonwrapper {
+.detailsiconbutton {
   width: 40px;
   height: 40px;
 
   &__icon {
     width: 100%;
+  }
+}
+
+.headerform {
+  height: 2rem;
+  width: 100%;
+  &__input {
+    height: 2rem;
+  }
+
+  &__buttonwrapper {
+    &__button {
+      width: 2rem;
+      height: 2rem;
+      &__icon {
+        width: 100%;
+      }
+    }
   }
 }

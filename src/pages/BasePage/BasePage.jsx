@@ -5,11 +5,15 @@ import HighlightHolder from "../../components/HighlightHolder/HighlightHolder";
 import GroupSideBar from "../../components/GroupSideBar/GroupSideBar";
 
 export default function BasePage({ pageURL }) {
+  function fetch(somePageAttribute) {}
+
   return (
     <main>
       <Header />
-      <HighlightHolder />
-      <GroupSideBar />
+      <div>
+        <HighlightHolder />
+        <GroupSideBar />
+      </div>
       <Footer />
     </main>
   );

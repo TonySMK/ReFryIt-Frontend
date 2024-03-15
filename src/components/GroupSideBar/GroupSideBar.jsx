@@ -4,7 +4,7 @@ import gearIconDark from "../../assets/icons/Gear-Icon-White-Background.png";
 
 export default function GroupSideBar() {
   return (
-    <section>
+    <section className="groupsidebarwrapper">
       <div>Groups</div>
       <button className="groupeditbuttonwrapper">
         <img className="groupeditbuttonwrapper__icon" src={gearIconLight} />

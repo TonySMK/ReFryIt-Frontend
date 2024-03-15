@@ -2,13 +2,10 @@
 @import "./mixins.scss";
 
 body {
-  // FIXME: need updating of default application font style
-  @include font000();
+  margin: 0;
+  @include font000;
 }
 
-// @mixin font000($font-family, $font-weight, $fontsize, $color) {
-//     font-family: $font-family;
-//     font-weight: $font-weight;
-//     font-size: $fontsize;
-//     color: $color;
-//   }
+button:hover {
+  cursor: pointer;
+}

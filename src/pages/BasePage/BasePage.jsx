@@ -12,7 +12,9 @@ export default function BasePage({ pageURL }) {
       <Header />
       <div>
         <HighlightHolder />
-        <GroupSideBar />
+        <aside className="groupsidebarvisibilitywrapper">
+          <GroupSideBar />
+        </aside>
       </div>
       <Footer />
     </main>

@@ -1,7 +1,9 @@
 import "./GroupModalStyles.scss";
 import { createPortal } from "react-dom";
 import { useState } from "react";
+
 import closeIcon from "../../assets/icons/close-24px.svg";
+import gearIconLight from "../../assets/icons/Gear-Icon-White-Background.png";
 
 import GroupSideBar from "../../components/GroupSideBar/GroupSideBar";
 
@@ -15,10 +17,8 @@ export default function GroupModal({
     // or not...
     // thebodyselector.style.overflowY = "scoll";
     // thebodyselector.style.height = "auto";
-    console.log("closed");
     return null;
   } else {
-    console.log("open");
     // thebodyselector.style.overflowY = "hidden";
     // thebodyselector.style.height = "100vh";
   }
@@ -27,9 +27,7 @@ export default function GroupModal({
     <>
       <aside className="groupmodalwrapper">
         <section className="groupmodalwrapper__grouplistwrapper">
-          <div className="groupmodalwrapper__grouplistwrapper__grouplist">
-            <GroupSideBar />
-          </div>
+          <GroupSideBar />
           <button
             className="groupmodalwrapper__closebuttonwrapper"
             onClick={() => closeGroupModalHandler()}

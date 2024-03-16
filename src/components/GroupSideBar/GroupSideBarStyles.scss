@@ -1,16 +1,18 @@
 @import "../../styles/Partials/mixins.scss";
+@import "../../styles/Partials/variables.scss";
 
 .groupsidebarwrapper {
-  @include mobile {
-    display: none;
-  }
-}
+  &__top {
+    &__title {
+      color: red;
+    }
+    &__button {
+      width: 40px;
+      height: 40px;
 
-.groupeditbuttonwrapper {
-  width: 40px;
-  height: 40px;
-
-  &__icon {
-    width: 100%;
+      &__icon {
+        width: 100%;
+      }
+    }
   }
 }

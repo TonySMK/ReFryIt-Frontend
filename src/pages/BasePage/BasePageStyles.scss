@@ -1,0 +1,8 @@
+@import "../../styles//Partials/mixins.scss";
+@import "../../styles//Partials/variables.scss";
+
+.groupsidebarvisibilitywrapper {
+  @include mobile {
+    display: none;
+  }
+}

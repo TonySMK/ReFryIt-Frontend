@@ -21,34 +21,44 @@ export default function HighlightCard({ highlightInfo }) {
           <div className="dateadded">{highlightInfo.created_at}</div>
         </div>
       </section>
+
       <section className="highlightcardwrapper__bottom">
         <button className="deletehiglightbutton buttonhightlightwrapper">
           <img className="deletehiglightbutton__icon" src={closeIcon} />
         </button>
-        <main className="highlightinnerwrapper">
-          <button className="highlightinnerwrapper__webpageiconbutton buttonhightlightwrapper">
-            @
-            {/* <img className="highlightinnerwrapper__webpageiconbutton__icon" /> */}
-          </button>
-          <button className="highlightinnerwrapper__expandnotesbutton buttonhightlightwrapper">
-            V
-            {/* <img className="highlightinnerwrapper__expandnotesbutton__icon" /> */}
-          </button>
-          <section className="highlightinnerwrapper__hightlightcontent">
-            {highlightInfo.highlight_passage}
-          </section>
-          <button className="highlightinnerwrapper__edithighlight buttonhightlightwrapper">
-            E
-            {/* <img className="highlightinnerwrapper__edithighlight__icon" /> */}
-          </button>
-          <button className="highlightinnerwrapper__starhighlightbutton buttonhightlightwrapper">
-            #
-            {/* <img className="highlightinnerwrapper__starhighlightbutton__icon" /> */}
-          </button>
-          <button className="highlightinnerwrapper__addnotesbutton buttonhightlightwrapper">
-            +
-            {/* <img className="highlightinnerwrapper__addnotesbutton__icon" /> */}
-          </button>
+
+        <main className="highlightinnerwrapper__bottom__cardcontent">
+          <div className="highlightinnerwrapper__bottom__cardcontent__left">
+            <button className="highlightinnerwrapper__webpageiconbutton buttonhightlightwrapper">
+              <img
+                className="highlightinnerwrapper__webpageiconbutton__icon"
+                src={highlightInfo.favicon_url}
+              />
+            </button>
+
+            <button className="highlightinnerwrapper__expandnotesbutton buttonhightlightwrapper">
+              V
+              {/* <img className="highlightinnerwrapper__expandnotesbutton__icon" /> */}
+            </button>
+          </div>
+
+          <div className="highlightinnerwrapper__bottom__cardcontent__middle">
+            <section className="highlightinnerwrapper__hightlightcontent">
+              {highlightInfo.highlight_passage}
+            </section>
+          </div>
+
+          <div className="highlightinnerwrapper__bottom__cardcontent__right">
+            <button className="edithighlightbutton buttonhightlightwrapper">
+              E{/* <img className="hedithighlightbutton__icon" /> */}
+            </button>
+            <button className="starhighlightbutton buttonhightlightwrapper">
+              #{/* <img className="starhighlightbutton__icon" /> */}
+            </button>
+            <button className="addhighlightnotesbutton buttonhightlightwrapper">
+              +{/* <img className="addhighlightnotesbutton__icon" /> */}
+            </button>
+          </div>
         </main>
       </section>
     </article>

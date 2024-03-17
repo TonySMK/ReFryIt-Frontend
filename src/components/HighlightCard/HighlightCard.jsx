@@ -2,8 +2,9 @@ import "./HighlightCardStyles.scss";
 import copyIcon from "../../assets/icons/copy-icon-512.png";
 import closeIcon from "../../assets/icons/close-24px.svg";
 
-export default function HighlightCard({ highlightInfo }) {
+export default function HighlightCard({ highlightInfo, thedeletehandler }) {
   // console.log(highlightInfo);
+
   return (
     <article className="highlightcardwrapper">
       <section className="highlightcardwrapper__top">
@@ -23,7 +24,12 @@ export default function HighlightCard({ highlightInfo }) {
       </section>
 
       <section className="highlightcardwrapper__bottom">
-        <button className="deletehiglightbutton buttonhightlightwrapper">
+        <button
+          className="deletehiglightbutton buttonhightlightwrapper"
+          onClick={() => {
+            thedeletehandler(highlightInfo.id);
+          }}
+        >
           <img className="deletehiglightbutton__icon" src={closeIcon} />
         </button>
 

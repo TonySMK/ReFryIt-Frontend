@@ -1,8 +1,9 @@
 import "./HighlightHolderStyles.scss";
 import HighlightCard from "../HighlightCard/HighlightCard";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
-export default function HighlightHolder({ object }) {
+export default function HighlightHolder({ object, deletehandler }) {
   // basically we are going to give this component and object, which
   // it will map over and produce a list of highlight cards
 
@@ -11,7 +12,13 @@ export default function HighlightHolder({ object }) {
   function createListOfCards(someObject) {
     if (someObject.length !== 0) {
       const cardList = someObject.map((element) => {
-        return <HighlightCard key={element.id} highlightInfo={element} />;
+        return (
+          <HighlightCard
+            key={element.id}
+            highlightInfo={element}
+            thedeletehandler={deletehandler}
+          />
+        );
       });
       setRenderedHighlightList(cardList);
     } else {

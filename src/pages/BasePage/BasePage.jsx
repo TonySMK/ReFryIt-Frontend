@@ -42,6 +42,18 @@ export default function BasePage({ pageURL }) {
       });
   }
 
+  function deletehandler(highlightid) {
+    axios
+      .delete(`http://localhost:8080/api/highlights/${highlightid}`)
+      .then((res) => {
+        console.log(res.data);
+        fetchHighlightData(thePageAttribute);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   useEffect(() => {
     fetchHighlightData(thePageAttribute);
   }, [pageURL, groupID]);
@@ -54,7 +66,10 @@ export default function BasePage({ pageURL }) {
         <main>
           <Header />
           <div>
-            <HighlightHolder object={highlightObject} />
+            <HighlightHolder
+              object={highlightObject}
+              deletehandler={deletehandler}
+            />
             <aside className="groupsidebarvisibilitywrapper">
               <GroupSideBar />
             </aside>

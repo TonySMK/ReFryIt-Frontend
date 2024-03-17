@@ -3,7 +3,7 @@ import copyIcon from "../../assets/icons/copy-icon-512.png";
 import closeIcon from "../../assets/icons/close-24px.svg";
 
 export default function HighlightCard({ highlightInfo }) {
-  console.log(highlightInfo);
+  // console.log(highlightInfo);
   return (
     <article className="highlightcardwrapper">
       <section className="highlightcardwrapper__top">

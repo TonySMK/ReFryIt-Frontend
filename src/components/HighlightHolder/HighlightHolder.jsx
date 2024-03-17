@@ -9,10 +9,18 @@ export default function HighlightHolder({ object }) {
   const [renderedHighlightList, setRenderedHighlightList] = useState("");
 
   function createListOfCards(someObject) {
-    const cardList = someObject.map((element) => {
-      return <HighlightCard key={element.id} highlightInfo={element} />;
-    });
-    setRenderedHighlightList(cardList);
+    if (someObject.length !== 0) {
+      const cardList = someObject.map((element) => {
+        return <HighlightCard key={element.id} highlightInfo={element} />;
+      });
+      setRenderedHighlightList(cardList);
+    } else {
+      setRenderedHighlightList(
+        <div className="emptyhighlightgroup">
+          there are no highlights in this group!
+        </div>
+      );
+    }
   }
 
   useEffect(() => {

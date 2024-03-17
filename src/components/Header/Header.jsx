@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import NavigationCompactModal from "../../components_modals/NavigationCompactModal/NavigationCompactModel";
 import GroupModal from "../../components_modals/GroupModal/GroupModal";
+import PageSettingModal from "../../components_modals/PageSettingModal/PageSettingModal";
 
 import veiwDetailsIcon from "../../assets/icons/view-details-512.png";
 import groupDetailsIcon from "../../assets/icons/book-dark_3725.png";
@@ -13,6 +14,7 @@ import copyIcon from "../../assets/icons//copy-icon-512.png";
 export default function Header() {
   const [isNavigationModelOpen, setIsNavigationModelOpen] = useState(false);
   const [isGroupModelOpen, setIsGroupModelOpen] = useState(false);
+  const [isSettingsModelOpen, setIsSettingsModelOpen] = useState(false);
 
   function closeNavigationModalHandler() {
     setIsNavigationModelOpen(false);
@@ -30,6 +32,14 @@ export default function Header() {
     setIsGroupModelOpen(true);
   }
 
+  function closeSetingsModalHandler() {
+    setIsSettingsModelOpen(false);
+  }
+
+  function openSettingsModalHandler() {
+    setIsSettingsModelOpen(true);
+  }
+
   return (
     <header className="mainheader">
       <button
@@ -38,7 +48,6 @@ export default function Header() {
       >
         <img className="detailsiconbutton__icon" src={veiwDetailsIcon} />
       </button>
-
       <form className="headerform">
         <input className="headerform__input" />
 
@@ -57,22 +66,24 @@ export default function Header() {
           </button>
         </div>
       </form>
-
       <button
         className="detailsiconbutton"
         onClick={() => openGroupModalHandler()}
       >
         <img className="detailsiconbutton__icon" src={groupDetailsIcon} />
       </button>
-
       <NavigationCompactModal
         isNavigationModelOpen={isNavigationModelOpen}
         closeNavigationModalHandler={closeNavigationModalHandler}
+        openSettingsModalHandler={openSettingsModalHandler}
       />
-
       <GroupModal
         isGroupModelOpen={isGroupModelOpen}
         closeGroupModalHandler={closeGroupModalHandler}
+      />
+      <PageSettingModal
+        isSettingsModelOpen={isSettingsModelOpen}
+        closeSetingsModalHandler={closeSetingsModalHandler}
       />
     </header>
   );

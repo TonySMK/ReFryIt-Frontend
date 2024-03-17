@@ -11,23 +11,21 @@ export default function GroupModal({
   isGroupModelOpen,
   closeGroupModalHandler,
 }) {
-  // let thebodyselector = document.getElementById("root");
+  let thebodyselector = document.getElementById("root");
   if (!isGroupModelOpen) {
-    // this if-statement is finally determines if the modal is rendered
-    // or not...
-    // thebodyselector.style.overflowY = "scoll";
-    // thebodyselector.style.height = "auto";
+    thebodyselector.style.overflowY = "scoll";
+    thebodyselector.style.height = "auto";
     return null;
   } else {
-    // thebodyselector.style.overflowY = "hidden";
-    // thebodyselector.style.height = "100vh";
+    thebodyselector.style.overflowY = "hidden";
+    thebodyselector.style.height = "100vh";
   }
 
   return createPortal(
     <>
       <aside className="groupmodalwrapper">
         <section className="groupmodalwrapper__grouplistwrapper">
-          <GroupSideBar />
+          <GroupSideBar closeGroupModalHandler={closeGroupModalHandler} />
           <button
             className="groupmodalwrapper__closebuttonwrapper"
             onClick={() => closeGroupModalHandler()}

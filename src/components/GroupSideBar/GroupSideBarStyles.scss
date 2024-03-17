@@ -3,6 +3,9 @@
 
 .groupsidebarwrapper {
   &__top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     &__title {
       color: red;
     }
@@ -14,5 +17,14 @@
         width: 100%;
       }
     }
+  }
+
+  &__bottom {
+    background-color: antiquewhite;
+    // height: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
   }
 }

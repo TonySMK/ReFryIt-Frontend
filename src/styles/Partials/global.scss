@@ -1,9 +1,16 @@
 @import "./fonts.scss";
 @import "./mixins.scss";
+@import "./variables.scss";
 
 body {
   margin: 0;
   @include font000;
+}
+
+button {
+  border: none;
+  padding: 0rem;
+  background-color: $buttonbackgroundcolor;
 }
 
 button:hover {

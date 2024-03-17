@@ -5,6 +5,7 @@ export default function HeaderButton({
   url,
   buttonText,
   closeNavigationModalHandler,
+  openSettingsModalHandler,
   enableClose,
 }) {
   function automaticClose(enableClose) {
@@ -12,13 +13,34 @@ export default function HeaderButton({
       closeNavigationModalHandler();
     }
   }
+
+  function automaticCloseThenOpenSettings(enableClose) {
+    if (enableClose) {
+      closeNavigationModalHandler();
+    }
+    openSettingsModalHandler();
+  }
+
+  if (buttonText === "Settings") {
+    return (
+      <Link className="headerlinkwrapper" to={url}>
+        <button
+          className="headerlinkwrapper__button"
+          onClick={() => automaticCloseThenOpenSettings(enableClose)}
+        >
+          {buttonText}
+        </button>
+      </Link>
+    );
+  } else {
+  }
+
   return (
     <Link className="headerlinkwrapper" to={url}>
       <button
         className="headerlinkwrapper__button"
         onClick={() => automaticClose(enableClose)}
       >
-        {" "}
         {buttonText}
       </button>
     </Link>

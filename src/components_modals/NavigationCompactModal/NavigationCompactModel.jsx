@@ -8,6 +8,7 @@ import ChangePageColorScheme from "../../components_utility/ChangePageColorSchem
 export default function NavigationCompactModal({
   isNavigationModelOpen,
   closeNavigationModalHandler,
+  openSettingsModalHandler,
 }) {
   // let thebodyselector = document.getElementById("root");
   if (!isNavigationModelOpen) {
@@ -46,7 +47,8 @@ export default function NavigationCompactModal({
           <HeaderButton
             url=""
             buttonText="Settings"
-            enableClose={false}
+            enableClose={true}
+            openSettingsModalHandler={openSettingsModalHandler}
             closeNavigationModalHandler={closeNavigationModalHandler}
           />
           <HeaderButton url="/logout" buttonText="Log Out" />

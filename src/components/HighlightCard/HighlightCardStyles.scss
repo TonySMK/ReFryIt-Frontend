@@ -1,0 +1,32 @@
+.highlightcardwrapper {
+  padding: 1rem;
+  box-sizing: border-box;
+  border-bottom: 2px solid black;
+}
+
+.urllink {
+  &__buttoncopy {
+    &__icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.deletehiglightbutton {
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.highlightinnerwrapper {
+  border: 1px solid blue;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.buttonhightlightwrapper {
+  width: 15px;
+  height: 15px;
+}

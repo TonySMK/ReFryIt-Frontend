@@ -1,0 +1,28 @@
+.pagesettingsmodalwrapper {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0rem;
+  background-color: aquamarine;
+  background-color: transparent;
+  padding: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__innerbody {
+    background-color: azure;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+
+  &__closebuttonwrapper {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+}

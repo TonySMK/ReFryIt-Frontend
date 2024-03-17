@@ -1,0 +1,26 @@
+.navigationmodalwrapper {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0rem;
+  background-color: aquamarine;
+  background-color: transparent;
+  padding: 1rem;
+
+  &__closebuttonwrapper {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &__buttonswrapper {
+    position: relative;
+    background-color: grey;
+    padding: 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

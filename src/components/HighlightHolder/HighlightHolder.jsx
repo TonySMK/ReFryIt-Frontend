@@ -27,5 +27,9 @@ export default function HighlightHolder({ object }) {
     createListOfCards(object);
   }, [object]);
 
-  return <section>{renderedHighlightList}</section>;
+  return (
+    <section className="highligherholderwrapper">
+      {renderedHighlightList}
+    </section>
+  );
 }

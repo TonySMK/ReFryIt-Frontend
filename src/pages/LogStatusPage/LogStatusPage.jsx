@@ -8,7 +8,7 @@ export default function LogStatusPage() {
       <div>login logo/animation</div>
       <div>Welcome</div>
       <Link to="/home/recent">
-        <button>Log-in</button>
+        <button className="loginbutton">Log-in button</button>
       </Link>
     </section>
   );

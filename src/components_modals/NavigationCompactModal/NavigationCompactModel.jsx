@@ -10,16 +10,14 @@ export default function NavigationCompactModal({
   closeNavigationModalHandler,
   openSettingsModalHandler,
 }) {
-  // let thebodyselector = document.getElementById("root");
+  let thebodyselector = document.getElementById("root");
   if (!isNavigationModelOpen) {
-    // this if-statement is finally determines if the modal is rendered
-    // or not...
-    // thebodyselector.style.overflowY = "scoll";
-    // thebodyselector.style.height = "auto";
+    thebodyselector.style.overflowY = "scoll";
+    thebodyselector.style.height = "auto";
     return null;
   } else {
-    // thebodyselector.style.overflowY = "hidden";
-    // thebodyselector.style.height = "100vh";
+    thebodyselector.style.overflowY = "hidden";
+    thebodyselector.style.height = "100vh";
   }
 
   return createPortal(

@@ -6,19 +6,14 @@ import GroupSideBar from "../../components/GroupSideBar/GroupSideBar";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function BasePage({ pageURL }) {
   const [compState, setCompState] = useState(true);
   const [highlightObject, setHighlightObject] = useState("");
 
   const { groupID } = useParams();
-  // const location = useLocation();
   const thePageAttribute = pageURL;
-  // console.log(groupID);
-  // console.log(window.location.pathname);
-  // console.log(location);
-  // console.log(location.pathname);
 
   function fetchHighlightData(somePageAttribute) {
     let finalURL;
@@ -33,7 +28,6 @@ export default function BasePage({ pageURL }) {
     axios
       .get(finalURL)
       .then((res) => {
-        // console.log(res.data);
         setHighlightObject(res.data);
         setCompState(false);
       })

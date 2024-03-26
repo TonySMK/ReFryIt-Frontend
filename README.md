@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# ReFryIt
+The entire application suite consists of a front-end application,
+back-end application, and a chrome extension application.
+The project's concept attempts to provide an alternative take on native
+browser bookmark managers, by providing users greater context of their "bookmarks".
+As the number of bookmarks increase and as time pass, the significance and context of
+each bookmark is lost amoung the sea of folders and other bookmarks. By displaying a user
+defined text snippet of a "bookmarked" webpage, each "bookmark"'s' context
+and exact significance can be better presented and preserved.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The chrome extension is what allows users to capture snapshots of
+a webpage's texts, which are then send and stored in the back-end database.
+The front-end application allows users to reveiw and modify their list of bookmarks
+and reference the webpage that they captured it from via the chrome extension.
 
-## Available Scripts
 
-In the project directory, you can run:
+Developed by Tony Sun
+## Deployment
+Alpha Version
 
-### `npm start`
+To deploy this project run: React application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+1. Install all dependencies:
+  npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+2. To start and render application:
+  npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*make sure to have the back-end server and database running as well...
+@ https://github.com/TonySMK/ReFryIt-Backend
 
-### `npm run build`
+**to see newly added highlights/bookmarks on the front-end, add the accompanying chrome extension to your chrome browser
+@ https://github.com/TonySMK/ReFryIt-Chrome-Extension
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

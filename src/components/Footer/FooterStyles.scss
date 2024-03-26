@@ -1,0 +1,12 @@
+.mainfooter {
+  background-color: beige;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  &__footertitle {
+    color: rgb(73, 230, 230);
+  }
+}

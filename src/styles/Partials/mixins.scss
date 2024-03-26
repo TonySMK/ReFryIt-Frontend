@@ -1,0 +1,44 @@
+@import "./fonts.scss";
+@import "./variables.scss";
+
+//Padding Presetss CSS Attributes
+@mixin someepadding {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+//Font Presets CSS Attributes
+@mixin fontset($fontFamily, $fontWeight, $fontSize, $color) {
+  font-family: $fontFamily;
+  font-weight: $fontWeightt;
+  font-size: $fontSize;
+  color: $color;
+}
+
+@mixin font000 {
+  font-family: "Nunito";
+  font-weight: 400;
+  font-size: 12;
+  color: $generaltext;
+}
+
+// Breakpoint Presets
+@mixin mobile {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}

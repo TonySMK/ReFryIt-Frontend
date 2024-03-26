@@ -1,3 +1,4 @@
+
 # ReFryIt
 The entire application suite consists of a front-end application,
 back-end application, and a chrome extension application.
@@ -28,10 +29,13 @@ To deploy this project run: React application
 2. To start and render application:
   npm start
 
+
+
+## Features
+
 *make sure to have the back-end server and database running as well...
 @ https://github.com/TonySMK/ReFryIt-Backend
 
-**to see newly added highlights/bookmarks on the front-end, add the accompanying chrome extension to your chrome browser
+**to be able to add new highlights/bookmarks, add the accompanying chrome extension to your chrome browser
 @ https://github.com/TonySMK/ReFryIt-Chrome-Extension
-```
 

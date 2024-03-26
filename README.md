@@ -1,5 +1,5 @@
 
-# ReFryIt
+# ReFryIt - Front-End
 The entire application suite consists of a front-end application,
 back-end application, and a chrome extension application.
 The project's concept attempts to provide an alternative take on native

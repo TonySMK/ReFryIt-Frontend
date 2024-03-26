@@ -21,7 +21,6 @@ export default function PageSettingModal({
   return createPortal(
     <aside className="pagesettingsmodalwrapper">
       <section className="pagesettingsmodalwrapper__innerbody">
-        {/* FIXME: fix the styling and implement the functionality of buttons */}
         <form>
           <section>
             <label>change site font</label>

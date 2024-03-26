@@ -16,7 +16,6 @@ export default function GroupSideBar({ closeGroupModalHandler }) {
     axios
       .get("http://localhost:8080/api/groups")
       .then((res) => {
-        // console.log(res.data);
         renderGroupList(res.data);
       })
       .catch((error) => console.log(error));

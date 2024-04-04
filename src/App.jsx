@@ -6,6 +6,7 @@ import LogStatusPage from "./pages/LogStatusPage/LogStatusPage";
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
+  console.log(process.env.REACT_APP_Domain);
   return (
     <div className="AppWrapper">
       <Routes>

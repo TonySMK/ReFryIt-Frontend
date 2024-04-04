@@ -9,12 +9,13 @@ import gearIconLight from "../../assets/icons/Gear-Icon-Clear-Background.png";
 import gearIconDark from "../../assets/icons/Gear-Icon-White-Background.png";
 
 export default function GroupSideBar({ closeGroupModalHandler }) {
+  const domain = process.env.REACT_APP_Domain;
   const [compState, setCompState] = useState(true);
   const [groupRenderList, setGroupRenderList] = useState(null);
 
   function fetchGroupList() {
     axios
-      .get("http://localhost:8080/api/groups")
+      .get(`${domain}/api/groups`)
       .then((res) => {
         renderGroupList(res.data);
       })

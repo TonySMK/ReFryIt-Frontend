@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function BasePage({ pageURL }) {
+  const domain = process.env.REACT_APP_Domain;
   const [compState, setCompState] = useState(true);
   const [highlightObject, setHighlightObject] = useState("");
 
@@ -18,11 +19,11 @@ export default function BasePage({ pageURL }) {
   function fetchHighlightData(somePageAttribute) {
     let finalURL;
     if (somePageAttribute === "favorite") {
-      finalURL = "http://localhost:8080/api/highlights/filter/favorite/";
+      finalURL = `${domain}/api/highlights/filter/favorite/`;
     } else if (somePageAttribute === "group") {
-      finalURL = `http://localhost:8080/api/highlights/filter/group/${groupID}`;
+      finalURL = `${domain}/api/highlights/filter/group/${groupID}`;
     } else if (somePageAttribute === "recent") {
-      finalURL = `http://localhost:8080/api/highlights/filter/recent/`;
+      finalURL = `${domain}/api/highlights/filter/recent/`;
     }
 
     axios

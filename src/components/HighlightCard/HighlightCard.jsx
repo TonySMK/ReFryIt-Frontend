@@ -14,7 +14,8 @@ export default function HighlightCard({ highlightInfo }) {
             </button>
 
             <div className="urllink__text">
-              {highlightInfo.domain + highlightInfo.domain_path}
+              {/* {highlightInfo.domain + highlightInfo.domain_path} */}
+              DOMAIN PATH
             </div>
           </div>
           <div className="dateadded">{highlightInfo.created_at}</div>

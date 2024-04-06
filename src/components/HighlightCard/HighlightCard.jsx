@@ -1,8 +1,10 @@
 import "./HighlightCardStyles.scss";
 import copyIcon from "../../assets/icons/copy-icon-512.png";
 import closeIcon from "../../assets/icons/close-24px.svg";
+import { Link } from "react-router-dom";
 
 export default function HighlightCard({ highlightInfo }) {
+  const fullAddress = `${highlightInfo.domain}${highlightInfo.domain_path}`;
   return (
     <article className="highlightcardwrapper">
       <section className="highlightcardwrapper__top">
@@ -13,42 +15,56 @@ export default function HighlightCard({ highlightInfo }) {
               <img className="urllink__buttoncopy__icon" src={copyIcon} />
             </button>
 
-            <div className="urllink__text">
-              {/* {highlightInfo.domain + highlightInfo.domain_path} */}
-              DOMAIN PATH
-            </div>
+            <Link className="urllink__text" to={fullAddress} target="_blank">
+              {highlightInfo.domain + highlightInfo.domain_path}
+            </Link>
           </div>
+
           <div className="dateadded">{highlightInfo.created_at}</div>
         </div>
       </section>
 
       <section className="highlightcardwrapper__bottom">
-        <button className="deletehiglightbutton buttonhightlightwrapper">
+        {/* THIS IS THE BOTTOM SECTION */}
+
+        <div></div>
+        <button className="highlightcardwrapper__bottom__deletehiglightbutton">
           <img className="deletehiglightbutton__icon" src={closeIcon} />
         </button>
 
-        <main className="highlightinnerwrapper__bottom__cardcontent">
-          <div className="highlightinnerwrapper__bottom__cardcontent__left">
-            <button className="highlightinnerwrapper__webpageiconbutton buttonhightlightwrapper">
+        <main className="highlightcardwrapper__bottom__cardcontent">
+          <div className="highlightcardwrapper__bottom__cardcontent__left">
+            {/* <button className="webpageiconbutton buttonhightlightwrapper">
               <img
-                className="highlightinnerwrapper__webpageiconbutton__icon"
+                className="webpageiconbutton__icon"
                 src={highlightInfo.favicon_url}
               />
-            </button>
+            </button> */}
 
-            <button className="highlightinnerwrapper__expandnotesbutton buttonhightlightwrapper">
+            <Link
+              className="webpageiconbutton buttonhightlightwrapper"
+              to={fullAddress}
+              target="_blank"
+            >
+              <img
+                className="webpageiconbutton__icon"
+                src={highlightInfo.favicon_url}
+              />
+            </Link>
+
+            <button className="expandnotesbutton buttonhightlightwrapper">
               V
               {/* <img className="highlightinnerwrapper__expandnotesbutton__icon" /> */}
             </button>
           </div>
 
-          <div className="highlightinnerwrapper__bottom__cardcontent__middle">
+          <div className="highlightcardwrapper__bottom__cardcontent__middle">
             <section className="highlightinnerwrapper__hightlightcontent">
               {highlightInfo.highlight_passage}
             </section>
           </div>
 
-          <div className="highlightinnerwrapper__bottom__cardcontent__right">
+          <div className="highlightcardwrapper__bottom__cardcontent__right">
             <button className="edithighlightbutton buttonhightlightwrapper">
               E{/* <img className="hedithighlightbutton__icon" /> */}
             </button>

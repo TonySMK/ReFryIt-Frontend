@@ -1,43 +1,129 @@
+@import "../../styles/Partials/mixins.scss";
+@import "../../styles/Partials/variables.scss";
+
 .highlightcardwrapper {
-  padding: 1rem;
+  padding: 0.5rem;
   box-sizing: border-box;
   border-bottom: 2px solid black;
+  height: auto;
+
+  &__top {
+    box-sizing: border-box;
+    border: 1px solid red;
+    padding: 0.12rem;
+  }
 
   &__bottom {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 1px solid blue;
+
+    &__deletehiglightbutton {
+      background-color: blanchedalmond;
+      display: flex;
+      height: 100%;
+      margin-right: 0.5rem;
+      box-sizing: border-box;
+      border: 1px solid black;
+    }
+
+    &__cardcontent {
+      border: 1px solid green;
+      width: 80%;
+      flex-grow: 1;
+      display: flex;
+      background-color: aliceblue;
+      flex-wrap: wrap;
+      padding: 0.25rem;
+      box-sizing: border-box;
+
+      &__left {
+        // background-color: red;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-right: 1rem;
+      }
+
+      &__middle {
+        width: 100%;
+        order: -1;
+        padding-bottom: 0.25rem;
+      }
+
+      &__right {
+        display: flex;
+        gap: 1rem;
+      }
+    }
   }
 }
 
+.urlanddatewrapper {
+  background-color: antiquewhite;
+  width: 100%;
+}
+
 .urllink {
+  display: flex;
+  // display: inline-block;
+  // flex-wrap: nowrap;
+  align-items: center;
+  // height: 1rem;
+  width: 100%;
+  gap: 0.5rem;
+
   &__buttoncopy {
+    width: 10px;
     &__icon {
       width: 100%;
       height: 100%;
     }
   }
+
+  &__text {
+    // display: none;
+    // flex-grow: 1;
+    width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+    // white-space: nowrap;
+    // height: 100%;
+  }
 }
 
-.deletehiglightbutton {
-  &__icon {
-    width: 100%;
-    height: 100%;
-  }
+.dateadded {
+  display: none;
 }
 
 .highlightinnerwrapper {
   border: 1px solid blue;
   padding: 1rem;
   box-sizing: border-box;
-
-  &__webpageiconbutton {
-    &__icon {
-      width: 100%;
-      height: 100%;
-    }
+}
+.webpageiconbutton {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem;
+  &__icon {
+    width: 100%;
+    height: 100%;
   }
 }
 
 .buttonhightlightwrapper {
   width: 15px;
   height: 15px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem;
 }

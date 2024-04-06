@@ -2,7 +2,5 @@
 @import "../../styles//Partials/variables.scss";
 
 .groupsidebarvisibilitywrapper {
-  @include mobile {
-    display: none;
-  }
+  display: none;
 }

@@ -20,11 +20,19 @@
   justify-content: space-between;
   width: 100%;
 
-  &__title {
-    width: 50%;
-    font-size: 12px;
-    margin: 0rem;
-    text-wrap: wrap;
+  &__titlewrapper {
+    display: table;
+    table-layout: fixed;
+    width: 60%;
+
+    &__title {
+      font-size: 12px;
+      height: 15px;
+      display: table-cell;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
   }
 
   &__actioncontainer {

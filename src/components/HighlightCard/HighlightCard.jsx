@@ -11,7 +11,12 @@ export default function HighlightCard({ highlightInfo }) {
   return (
     <article className="highlightcardwrapper">
       <header className="highlightheader">
-        <h2 className="highlightheader__title">{highlightInfo.title}</h2>
+        <div className="highlightheader__titlewrapper">
+          <h2 className="highlightheader__titlewrapper__title">
+            {highlightInfo.title}
+          </h2>
+        </div>
+
         <aside className="highlightheader__actioncontainer">
           <DeleteButton />
           <StarButton />

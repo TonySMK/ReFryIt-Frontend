@@ -1,5 +1,10 @@
 import "./StarButtonStyles.scss";
+import starIcon from "../../assets/icons/star-icon.png";
 
 export default function StarButton() {
-  return <></>;
+  return (
+    <button className="starbutton">
+      <img className="starbutton__icon" src={starIcon} />
+    </button>
+  );
 }

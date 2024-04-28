@@ -1,0 +1,10 @@
+.starbutton {
+  width: 15px;
+  height: 15px;
+
+  &__icon {
+    background-color: red;
+    width: inherit;
+    height: inherit;
+  }
+}

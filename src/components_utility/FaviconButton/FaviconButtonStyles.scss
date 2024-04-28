@@ -1,9 +1,10 @@
-.deletebutton {
+.favuiconbutton {
   width: 15px;
   height: 15px;
+  display: flex;
 
   &__icon {
-    background-color: blue;
+    background-color: red;
     width: inherit;
     height: inherit;
   }

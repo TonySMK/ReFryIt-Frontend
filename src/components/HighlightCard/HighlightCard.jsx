@@ -1,5 +1,4 @@
 import "./HighlightCardStyles.scss";
-import { Link } from "react-router-dom";
 import FaviconButton from "../../components_utility/FaviconButton/FaviconButton";
 import DeleteButton from "../../components_utility/DeleteButton/DeleteButton";
 import StarButton from "../../components_utility/StarButton/StarButton";

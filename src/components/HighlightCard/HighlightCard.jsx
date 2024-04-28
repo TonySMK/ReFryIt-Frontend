@@ -2,6 +2,9 @@ import "./HighlightCardStyles.scss";
 import copyIcon from "../../assets/icons/copy-icon-512.png";
 import closeIcon from "../../assets/icons/close-24px.svg";
 import { Link } from "react-router-dom";
+import starIcon from "../../assets/icons/star-icon.png";
+import pencilIcon from "../../assets/icons/pencil-outline-icon.png";
+import noteIcon from "../../assets/icons/sticky-note-icon2.png";
 
 export default function HighlightCard({ highlightInfo }) {
   const fullAddress = `${highlightInfo.domain}${highlightInfo.domain_path}`;
@@ -27,20 +30,12 @@ export default function HighlightCard({ highlightInfo }) {
       <section className="highlightcardwrapper__bottom">
         {/* THIS IS THE BOTTOM SECTION */}
 
-        <div></div>
-        <button className="highlightcardwrapper__bottom__deletehiglightbutton">
+        <button className="highlightcardwrapper__bottom__deletehiglightbutton primaryclosebutton">
           <img className="deletehiglightbutton__icon" src={closeIcon} />
         </button>
 
         <main className="highlightcardwrapper__bottom__cardcontent">
           <div className="highlightcardwrapper__bottom__cardcontent__left">
-            {/* <button className="webpageiconbutton buttonhightlightwrapper">
-              <img
-                className="webpageiconbutton__icon"
-                src={highlightInfo.favicon_url}
-              />
-            </button> */}
-
             <Link
               className="webpageiconbutton buttonhightlightwrapper"
               to={fullAddress}
@@ -53,8 +48,10 @@ export default function HighlightCard({ highlightInfo }) {
             </Link>
 
             <button className="expandnotesbutton buttonhightlightwrapper">
-              V
-              {/* <img className="highlightinnerwrapper__expandnotesbutton__icon" /> */}
+              <img
+                className="highlightinnerwrapper__expandnotesbutton__icon buttoniconimage"
+                src={noteIcon}
+              />
             </button>
           </div>
 
@@ -66,13 +63,21 @@ export default function HighlightCard({ highlightInfo }) {
 
           <div className="highlightcardwrapper__bottom__cardcontent__right">
             <button className="edithighlightbutton buttonhightlightwrapper">
-              E{/* <img className="hedithighlightbutton__icon" /> */}
+              <img
+                className="hedithighlightbutton__icon buttoniconimage"
+                src={pencilIcon}
+              />
             </button>
+
             <button className="starhighlightbutton buttonhightlightwrapper">
-              #{/* <img className="starhighlightbutton__icon" /> */}
+              <img
+                className="starhighlightbutton__icon buttoniconimage"
+                src={starIcon}
+              />
             </button>
+
             <button className="addhighlightnotesbutton buttonhightlightwrapper">
-              +{/* <img className="addhighlightnotesbutton__icon" /> */}
+              +<img className="addhighlightnotesbutton__icon" />
             </button>
           </div>
         </main>

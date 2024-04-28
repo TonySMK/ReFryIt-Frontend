@@ -37,6 +37,33 @@ export default function BasePage({ pageURL }) {
       });
   }
 
+  function addFavorite(highlightObject) {
+    // we need some way toggle the state of the favorite value
+    let somevalue;
+
+    if (highlightObject.star_status === 1) {
+      somevalue = 0;
+    } else somevalue = 1;
+
+    axios
+      .patch(`${domain}/api/highlights/${highlightObject.id}`, {
+        star_status: somevalue,
+      })
+      .then(() => {
+        fetchHighlightData(thePageAttribute);
+      });
+    // this function changes the favorite state of a given highlight
+  }
+
+  function deleteHighlight(highlightObject) {
+    // this function delete a highlight given a highlight
+    axios.delete(`${domain}/api/highlights/${highlightObject.id}`).then(() => {
+      fetchHighlightData(thePageAttribute);
+    });
+  }
+
+  function addNewNote() {}
+
   useEffect(() => {
     fetchHighlightData(thePageAttribute);
   }, [pageURL, groupID]);

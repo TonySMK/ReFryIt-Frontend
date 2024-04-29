@@ -1,11 +1,11 @@
 import "./HighlightCardStyles.scss";
 import FaviconButton from "../../components_utility/FaviconButton/FaviconButton";
 import DeleteButton from "../../components_utility/DeleteButton/DeleteButton";
-import StarButton from "../../components_utility/StarButton/StarButton";
+import BookmarkButton from "../../components_utility/BookmarkButton/BookmarkButton";
 import NoteVisibiltyButton from "../../components_utility/NoteVisibilityButton/NoteVisibilityButton";
 import EditButton from "../../components_utility/EditButton/Editbutton";
 
-export default function HighlightCard({ highlightInfo }) {
+export default function HighlightCard({ highlightInfo, updateStarStatus }) {
   const fullAddress = `${highlightInfo.domain}${highlightInfo.domain_path}`;
   return (
     <article className="highlightcardwrapper">
@@ -17,14 +17,17 @@ export default function HighlightCard({ highlightInfo }) {
         </div>
 
         <aside className="highlightheader__actioncontainer">
-          <DeleteButton />
-          <StarButton />
-          <NoteVisibiltyButton />
-          <EditButton />
           <FaviconButton
             webAddress={fullAddress}
             favIconURL={highlightInfo.favicon_url}
           />
+          <BookmarkButton
+            highlightInfo={highlightInfo}
+            updateStarStatus={updateStarStatus}
+          />
+          <NoteVisibiltyButton />
+          <EditButton />
+          <DeleteButton />
         </aside>
       </header>
       <p className="highlightcardwrapper__passage">
@@ -34,16 +37,3 @@ export default function HighlightCard({ highlightInfo }) {
     </article>
   );
 }
-
-/* 
-<div className="highlightcardwrapper__bottom__cardcontent__middle">
-  <section className="highlightinnerwrapper__hightlightcontent">
-    {highlightInfo.highlight_passage}
-  </section>
-</div>; 
-
-            <Link className="urllink__text" to={fullAddress} target="_blank">
-              {highlightInfo.domain + highlightInfo.domain_path}
-            </Link>
-
-*/

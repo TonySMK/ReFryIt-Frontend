@@ -12,6 +12,7 @@ export default function BasePage({ pageURL }) {
   const domain = process.env.REACT_APP_Domain;
   const [compState, setCompState] = useState(true);
   const [highlightObject, setHighlightObject] = useState("");
+  // const [starvalue, ]
 
   const { groupID } = useParams();
   const thePageAttribute = pageURL;
@@ -37,24 +38,6 @@ export default function BasePage({ pageURL }) {
       });
   }
 
-  function addFavorite(highlightObject) {
-    // we need some way toggle the state of the favorite value
-    let somevalue;
-
-    if (highlightObject.star_status === 1) {
-      somevalue = 0;
-    } else somevalue = 1;
-
-    axios
-      .patch(`${domain}/api/highlights/${highlightObject.id}`, {
-        star_status: somevalue,
-      })
-      .then(() => {
-        fetchHighlightData(thePageAttribute);
-      });
-    // this function changes the favorite state of a given highlight
-  }
-
   function deleteHighlight(highlightObject) {
     // this function delete a highlight given a highlight
     axios.delete(`${domain}/api/highlights/${highlightObject.id}`).then(() => {
@@ -62,7 +45,33 @@ export default function BasePage({ pageURL }) {
     });
   }
 
-  function addNewNote() {}
+  function updateStarStatus(highlightID, starValue) {
+    let value;
+    if (starValue === 1) {
+      value = 0;
+    } else {
+      value = 1;
+    }
+
+    console.log("finally" + value);
+
+    axios
+      .patch(`${domain}/api/highlights/${highlightID}`, {
+        star_status: value,
+      })
+      .then((res) => {
+        fetchHighlightData(thePageAttribute);
+        /* 
+        MAGIC: i unable to reason why we need to the fetch
+        function here in order to properly update the backend?
+
+        b/c without it the actual "value" does not change...
+        */
+
+        console.log(res.data[0]);
+      })
+      .catch((error) => console.log(error));
+  }
 
   useEffect(() => {
     fetchHighlightData(thePageAttribute);
@@ -76,7 +85,11 @@ export default function BasePage({ pageURL }) {
         <main>
           <Header />
           <div>
-            <HighlightHolder object={highlightObject} />
+            <HighlightHolder
+              object={highlightObject}
+              updateStarStatus={updateStarStatus}
+            />
+
             <aside className="groupsidebarvisibilitywrapper">
               <GroupSideBar />
             </aside>

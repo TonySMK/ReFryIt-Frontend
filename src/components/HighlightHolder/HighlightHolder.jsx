@@ -2,7 +2,11 @@ import "./HighlightHolderStyles.scss";
 import HighlightCard from "../HighlightCard/HighlightCard";
 import { useState, useEffect } from "react";
 
-export default function HighlightHolder({ object, updateStarStatus }) {
+export default function HighlightHolder({
+  object,
+  updateStarStatus,
+  deleteHighlight,
+}) {
   const [renderedHighlightList, setRenderedHighlightList] = useState("");
 
   function createListOfCards(someObject) {
@@ -13,6 +17,7 @@ export default function HighlightHolder({ object, updateStarStatus }) {
             key={element.id}
             highlightInfo={element}
             updateStarStatus={updateStarStatus}
+            deleteHighlight={deleteHighlight}
           />
         );
       });

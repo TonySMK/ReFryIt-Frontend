@@ -5,7 +5,11 @@ import BookmarkButton from "../../components_utility/BookmarkButton/BookmarkButt
 import NoteVisibiltyButton from "../../components_utility/NoteVisibilityButton/NoteVisibilityButton";
 import EditButton from "../../components_utility/EditButton/Editbutton";
 
-export default function HighlightCard({ highlightInfo, updateStarStatus }) {
+export default function HighlightCard({
+  highlightInfo,
+  updateStarStatus,
+  deleteHighlight,
+}) {
   const fullAddress = `${highlightInfo.domain}${highlightInfo.domain_path}`;
   return (
     <article className="highlightcardwrapper">
@@ -21,13 +25,20 @@ export default function HighlightCard({ highlightInfo, updateStarStatus }) {
             webAddress={fullAddress}
             favIconURL={highlightInfo.favicon_url}
           />
+
           <BookmarkButton
             highlightInfo={highlightInfo}
             updateStarStatus={updateStarStatus}
           />
+
           <NoteVisibiltyButton />
+
           <EditButton />
-          <DeleteButton />
+
+          <DeleteButton
+            highlightInfo={highlightInfo}
+            deleteHighlight={deleteHighlight}
+          />
         </aside>
       </header>
       <p className="highlightcardwrapper__passage">

@@ -38,11 +38,14 @@ export default function BasePage({ pageURL }) {
       });
   }
 
-  function deleteHighlight(highlightObject) {
+  function deleteHighlight(highlightID) {
     // this function delete a highlight given a highlight
-    axios.delete(`${domain}/api/highlights/${highlightObject.id}`).then(() => {
-      fetchHighlightData(thePageAttribute);
-    });
+    axios
+      .delete(`${domain}/api/highlights/${highlightID}`)
+      .then(() => {
+        fetchHighlightData(thePageAttribute);
+      })
+      .catch((error) => console.log(error));
   }
 
   function updateStarStatus(highlightID, starValue) {
@@ -53,14 +56,15 @@ export default function BasePage({ pageURL }) {
       value = 1;
     }
 
-    console.log("finally" + value);
+    // console.log("finally" + value);
 
     axios
       .patch(`${domain}/api/highlights/${highlightID}`, {
         star_status: value,
       })
-      .then((res) => {
+      .then(() => {
         fetchHighlightData(thePageAttribute);
+
         /* 
         MAGIC: i unable to reason why we need to the fetch
         function here in order to properly update the backend?
@@ -68,7 +72,7 @@ export default function BasePage({ pageURL }) {
         b/c without it the actual "value" does not change...
         */
 
-        console.log(res.data[0]);
+        // console.log(res.data[0]);
       })
       .catch((error) => console.log(error));
   }
@@ -88,6 +92,7 @@ export default function BasePage({ pageURL }) {
             <HighlightHolder
               object={highlightObject}
               updateStarStatus={updateStarStatus}
+              deleteHighlight={deleteHighlight}
             />
 
             <aside className="groupsidebarvisibilitywrapper">

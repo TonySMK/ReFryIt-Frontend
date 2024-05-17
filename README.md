@@ -30,11 +30,11 @@ To deploy this project run: React application
 
 ## Features
 
-\*make sure to have the back-end server and database running as well...
-@ [Refry Backend](https://github.com/TonySMK/ReFryIt-Backend)
+* make sure to have the back-end server and database running as well...
+* [Refry Backend](https://github.com/TonySMK/ReFryIt-Backend)
 
-\*\*to be able to add new highlights/bookmarks, add the accompanying chrome extension to your chrome browser
-@ (Refry Chrome Extension)[https://github.com/TonySMK/ReFryIt-Chrome-Extension]
+* to be able to add new highlights/bookmarks, add the accompanying chrome extension to your chrome browser
+* (Refry Chrome Extension)[https://github.com/TonySMK/ReFryIt-Chrome-Extension]
 
 ## Acknowledgements
 

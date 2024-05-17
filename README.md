@@ -34,7 +34,7 @@ To deploy this project run: React application
 * [Refry Backend](https://github.com/TonySMK/ReFryIt-Backend)
 
 * to be able to add new highlights/bookmarks, add the accompanying chrome extension to your chrome browser
-* (Refry Chrome Extension)[https://github.com/TonySMK/ReFryIt-Chrome-Extension]
+* [Refry Chrome Extension](https://github.com/TonySMK/ReFryIt-Chrome-Extension)
 
 ## Acknowledgements
 

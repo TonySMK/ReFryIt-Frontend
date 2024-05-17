@@ -23,10 +23,10 @@ Alpha Version
 To deploy this project run: React application
 
 1. Install all dependencies:
-   'npm install'
+   `npm install`
 
 2. To start and render application:
-   'npm start'
+   `npm start`
 
 ## Features
 
